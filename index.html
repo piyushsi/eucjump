@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+  <script type="text/javascript" src="p5min.js"></script>
+  <script type="text/javascript" src="sketch.js"></script>
+  <script type="text/javascript" src="Obstacle.js"></script>
+  <script type="text/javascript" src="TRex.js"></script>
+</head>
+<body>
+	<div id="sense_u" class="object_img"><img src="base.png"></div>
+	<style type="text/css">
+		img{
+			position: absolute;
+			height: 5rem;
+		}
+		.object_img {
+  animation: MoveDown .4s linear;
+  position: absolute;
+  top: 5.8rem;
+}
+@keyframes MoveDown {
+  0%{
+top: 0rem
+  	}
+  100% {
+    top:  5.8rem;
+  }
+}
+
+@keyframes MoveXDown {
+  0%{
+top: 5.88rem
+  	}
+  100% {
+    top:  5.8rem;
+  }
+}
+@keyframes MoveUpDown {
+  0%{
+top: 5.8rem
+}
+50%{
+  		top:0rem
+}
+  100% {
+    top:  8rem;
+  }
+}
+body{
+	zoom: 2;
+}
+	</style>
+</body>
+<script>
+		var objectImg = document.getElementById('sense_u')
+		document.addEventListener("keydown", event =>{
+			if (event.keyCode===38){
+				console.log('piyush');
+				objectImg.style.animation="MoveUpDown .45s ease "	
+			}
+		})
+		document.addEventListener("keyup", event =>{
+			if (event.keyCode===38){
+				console.log('piyush');
+				objectImg.style.animation="MoveDown .75s ease "	
+			}
+		})
+	</script>
+</html>
